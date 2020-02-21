@@ -1,18 +1,39 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Blinker', sans-serif;
+* {
+  box-sizing: border-box;
 }
 
-a:visited, a:link, a {
-  text-decoration: none;
+body {
+  margin: 0;
+  font-family: 'Blinker', sans-serif;
+  font-size: 18px;
+}
+
+a {
   color: white;
 }
 
-ol {
+ol, ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+main {
+  margin-top: 63px;
+}
+
+nav {
+  position: fixed;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(48,48,48,1) 69%);
+  border-bottom: 3px solid #fc064c;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+nav a {
+  text-decoration: none;
 }
 
 nav li {
@@ -27,30 +48,111 @@ nav li a:hover {
   background-color: #fc064c;
 }
 
-.inner-nav {
-  max-width: 800px;
-  display: flex;
+section > div, header, .inner-nav, ul, footer div {
   margin: 0 auto;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
+  max-width: 1200px;
   padding: 0 10px;
 }
 
-nav {
-  padding: 20px 0px;
-  background: rgb(0,0,0);
-  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(48,48,48,1) 69%);
-  border-bottom: 3px solid #fc064c;
+footer {
+  background-color: #fc064c;
+}
+
+footer div {
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  color: white;
+}
+
+dl {
+  margin: 20px 20px;
+}
+
+dd {
+  margin: 0;
+}
+
+dd a {
+  text-decoration: none;
+}
+
+dt {
+  color: black;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.inner-nav, .built-for-business ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.inner-nav ol {
+  margin-left: 30px;
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
-  font-size: 50px;
+  font-size: 2.7rem;
   color: #FFFFFF;
-  font-weight: 200;
+  font-weight: 700;
 }
 
-main {
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 10px;
+}
+
+aside {
+  width: 50%;
+  max-width: 500px;
+}
+
+.who-we-are h1 {
+  font-size: 3.7rem;
+  margin-bottom: 10px;
+}
+
+.who-we-are p {
+  font-size: 1.5rem;
+}
+
+.sign-up {
+  background-color: #fc064c;
+  padding: 30px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.sign-up h2 {
+  margin-top: 0;
+}
+
+.sign-up input {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #b2b2b2;
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 40px;
+}
+
+.sign-up p {
+  margin-top: 45px;
+  font-size: 0.9rem;
+}
+
+section {
   background: rgb(0,0,0);
   background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(48,48,48,1) 69%);
   padding: 40px 0px;
@@ -58,25 +160,62 @@ main {
   font-weight: 200;
 }
 
-.main-wrapper {
-  max-width: 800px;
-  margin: 0 auto;
+.who-we-work-with, .built-for-business  {
+  text-align: center;
+  background: #fedfe9;
+  color: #fc064c;
+}
+
+.built-for-business li {
+  max-width: 240px;
+  text-align: left;
+  margin: 20px 20px;
+}
+
+.built-for-business i {
+  font-size: 2rem;
+}
+
+.built-for-business p {
+  color: black;
+}
+
+.built-for-business a {
+  color: #fc064c;
+  text-decoration: none;
+}
+
+.built-for-business span {
+  position: relative;
+  left: 15px;
+}
+
+.seperator {
+  margin: 20px;
+}
+
+.section-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.buy-now-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   position: relative;
 }
 
-section {
-  width: 250px;
+.info {
+  width: 350px;
   text-align: center;
   background: rgb(92,92,92);
   background: linear-gradient(0deg, rgba(92,92,92,1) 0%, rgba(168,168,168,1) 100%);
-  margin: 35px 0px;
-
+  margin: 35px 10px;
 }
 
-section i {
+.info i {
   font-size: 35px;
   padding: 25px;
   background-color: #fc064c;
@@ -112,12 +251,118 @@ section i {
   color: blue;
 }
 
+.button {
+  color: #fc064c;
+  border: 1px solid #fc064c;
+  border-radius: 5px;
+  padding: 8px 17px;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: white;
+  border: 1px solid white;
+  background-color: #fc064c;
+}
+
+.button-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-box .button {
+  width: 45%;
+  position: relative;
+}
+
+.button-box i {
+  position: absolute;
+  left: 20px;
+}
+
+.sign-up .button:hover {
+  color: #fc064c;
+  border: 1px solid #fc064c;
+  background-color: #e7e7e7;
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logos img {
+  width: 150px;
+}
+
+@media only screen and (max-width: 1030px) {
+  header {
+    display: initial;
+  }
+
+  header h1 {
+    margin-top: 10px;
+  }
+
+  aside {
+    margin: auto;
+    width: 80%;
+    max-width: initial;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .who-we-are h1 {
+    font-size: 2.7rem;
+  }
+
+  .who-we-are p {
+    font-size: 1.3rem;
+  }
+
+  .logos img {
+    width: 100px;
+  }
+
+  .built-for-business ul {
+    justify-content: space-evenly;
+  }
+}
+
+@media only screen and (max-width: 615px) {
+  .logos img {
+    width: 150px;
+  }
+
+
+
+  .inner-nav .button {
+    display: none;
+  }
+
+  .inner-nav {
+    justify-content: center;
+  }
+}
+
 @media only screen and (max-width: 550px) {
   .links {
     margin: 10px 0px;
   }
 
+  .inner-nav ol {
+    display: none;
+  }
+  
   .inner-nav {
     flex-direction: column;
+  }
+
+  .built-for-business li {
+    max-width: 80%;
   }
 }
